@@ -96,7 +96,7 @@ const SideBar = () => {
         
       ],
     },
-    { label: 'Banner', icon: <ViewCarouselIcon />, link: '/' },
+    { label: 'Banner', icon: <ViewCarouselIcon />, link: '/banner' },
     { label: 'Coupon', icon: <CardGiftcardIcon />, link: '/' },
     { label: 'Send Notifications', icon: <NotificationsIcon/>, link: '/' },
     { label: 'Messages', icon: <MessageIcon />, link: '/message' },
