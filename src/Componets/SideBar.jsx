@@ -80,7 +80,7 @@ const SideBar = () => {
      },
     { label: 'Category Setup', icon: <CategoryIcon />, link: '/',
       submenu: [
-        { label: 'Category' ,icon:<HorizontalRuleIcon />, link: '' },
+        { label: 'Category' ,icon:<HorizontalRuleIcon />, link: '/category' },
         
         
       ],

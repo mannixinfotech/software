@@ -6,6 +6,8 @@ import SideBar from "./Componets/SideBar"
 import Message from './Componets/Message';
 import AllOrder from './Order/AllOrder';
 import DashBoard from './Componets/DashBoard';
+import Category from './CategorySetup/Category';
+
 
 
 
@@ -23,7 +25,7 @@ function App() {
       
           <Route path='/message' element={<Message/>}/>
           <Route path='/allorder' element={<AllOrder/>}/>
-        
+          <Route  path='/category' element={<Category/>}/>
         
       </Routes>
  </BrowserRouter>
