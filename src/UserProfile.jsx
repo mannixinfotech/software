@@ -27,7 +27,7 @@ const UserProfile = () => {
           
         >
           <AccountCircleIcon fontSize='large' />
-          <p className='text-xl font-bold'>Studenttt</p>
+          <p className='text-xl font-bold'>Student</p>
           <p>Login as a student to explore course materials and assignments.</p>
         </div>
         <div
