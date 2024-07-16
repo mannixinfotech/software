@@ -23,6 +23,7 @@ const Category = () => {
       });
   }, []);
   
+  
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -121,7 +122,7 @@ const Category = () => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-end gap-3 mt-4">
+            <div className="flex md:justify-end gap-3 mt-4">
               <button type="reset" id="reset" className="btn btn-secondary bg-gray-400 text-white py-2 px-4 rounded-md">Reset</button>
               <button type="submit" className="btn btn-primary bg-indigo-500 text-white py-2 px-4 rounded-md">Submit</button>
             </div>

@@ -8,6 +8,12 @@ import AllOrder from './Order/AllOrder';
 import DashBoard from './Componets/DashBoard';
 import Category from './CategorySetup/Category';
 import Banner from './Componets/Banner';
+import Coupon from './Componets/Coupon';
+import Notification from './Componets/Notification';
+import NewSale from './Pos/NewSale';
+import Orders from './Pos/Orders';
+import VerifyPayment from './Pos/VerifyPayment';
+
 
 
 
@@ -28,7 +34,12 @@ function App() {
           <Route path='/allorder' element={<AllOrder/>}/>
           <Route  path='/category' element={<Category/>}/>
           <Route path='/banner' element={<Banner/>}/>
-        
+          <Route path='/coupon' element={<Coupon/>}/>
+          <Route path='/notification' element={<Notification/>}/>
+
+          <Route path='/new-sale' element={<NewSale/>}/>
+          <Route path='/orders' element={<Orders/>}/>
+         <Route path='/verifyPayment' element={<VerifyPayment/>}/>
       </Routes>
  </BrowserRouter>
     </div>

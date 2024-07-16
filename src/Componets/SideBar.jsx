@@ -58,12 +58,12 @@ const SideBar = () => {
     { label: 'Dashboard', icon: <HomeIcon />, link: '/' },
     { label: 'POS', icon: <ShoppingBagIcon/>, link: '/',
       submenu: [
-        { label: 'New Sale',icon:<HorizontalRuleIcon />, link: '' },
-        { label: 'Orders' ,icon:<HorizontalRuleIcon />, link: '' },
+        { label: 'New Sale',icon:<HorizontalRuleIcon />, link: '/new-sale' },
+        { label: 'Orders' ,icon:<HorizontalRuleIcon />, link: '/orders' },
         
       ],
      },
-    { label: 'Verify Offline Payment', icon: <ShoppingBasketIcon />, link: '/' },
+    { label: 'Verify Offline Payment', icon: <ShoppingBasketIcon />, link: '/verifyPayment' },
     { label: 'Order', icon: <ShoppingCartIcon />, link: '/',
       submenu: [
         { label: 'All',icon:<HorizontalRuleIcon /> ,link: 'allorder' },
@@ -97,8 +97,8 @@ const SideBar = () => {
       ],
     },
     { label: 'Banner', icon: <ViewCarouselIcon />, link: '/banner' },
-    { label: 'Coupon', icon: <CardGiftcardIcon />, link: '/' },
-    { label: 'Send Notifications', icon: <NotificationsIcon/>, link: '/' },
+    { label: 'Coupon', icon: <CardGiftcardIcon />, link: '/coupon' },
+    { label: 'Send Notifications', icon: <NotificationsIcon/>, link: '/notification' },
     { label: 'Messages', icon: <MessageIcon />, link: '/message' },
     { label: 'Earning Report', icon: <PieChartIcon />, link: '/' },
     { label: 'Order Report', icon: <SignalCellularAltIcon />, link: '/' },

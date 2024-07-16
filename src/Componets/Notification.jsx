@@ -3,7 +3,7 @@ import SideBar from "../Componets/SideBar";
 import DataTable from 'react-data-table-component';
 import axios from 'axios';
 
-const Banner = () => {
+const Notification = () => {
   const [imagePreview, setImagePreview] = useState(null);
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -39,7 +39,7 @@ const Banner = () => {
       
     },
     {
-      name: 'Banner Image',
+      name: 'Image',
       
     },
     {
@@ -47,7 +47,7 @@ const Banner = () => {
      
     },
     {
-      name: 'Banner Type',
+      name: 'Description',
       
     },
     {
@@ -66,11 +66,12 @@ const Banner = () => {
       <div className='md:pl-64 pt-14 m-2'>
         <div className="flex items-center pt-3 pl-6">
           <img
-            src="../banner.png"
+            src="../bell.png"
             alt="Add Category"
             className="w-6 h-6 mr-2"
           />
-          <p className="font-bold text-lg">Banner Setup</p>
+          <p className="font-bold text-lg">
+          Send Notification</p>
         </div>
         <div className="m-2 bg-white border border-gray-200 p-3 mb-4 rounded-lg shadow">
           <div className="md:flex md:space-x-4">
@@ -82,35 +83,14 @@ const Banner = () => {
                   type="text" 
                   name="title" 
                   className="form-input border border-gray-300 rounded-md p-2 mb-4  block w-full" 
-                  placeholder="New banner" 
+                  placeholder="New notification" 
                   required 
                 />
               </div>
+             
               <div className="form-group">
-                <label className="input-label">Item Type<span className="text-red-500 ml-1">*</span></label>
-                <select 
-                  name="item_type" 
-                  className="custom-select js-select2-custom select2-hidden-accessible block w-full border border-gray-300 rounded-md p-2 mb-4" 
-                  tabIndex="-1" 
-                  aria-hidden="true"
-                >
-                  <option disabled selected>Select item type</option>
-                  <option value="product">Product</option>
-                  <option value="category">Category</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <label className="input-label">Product Type<span className="text-red-500 ml-1">*</span></label>
-                <select 
-                  name="item_type" 
-                  className="custom-select js-select2-custom select2-hidden-accessible mb-4 block w-full border border-gray-300 rounded-md p-2" 
-                  tabIndex="-1" 
-                  aria-hidden="true"
-                >
-                  <option disabled selected>Select Product</option>
-                  <option value="product">Product1</option>
-                  <option value="category">Product2</option>
-                </select>
+                <label className="input-label">Description<span className="text-red-500 ml-1">*</span></label><br/>
+                <textarea className='border border-black w-3/4'></textarea>
               </div>
             </div>
             
@@ -118,8 +98,8 @@ const Banner = () => {
             <div className="md:w-1/2">
               <div className="form-group">
                 <div className="flex items-center justify-center gap-1">
-                  <label className="mb-0">Banner Image</label>
-                  <small className="text-red-500">* ( Ratio 2:1 )</small>
+                  <label className="mb-0">Notification Banner</label>
+                  <small className="text-red-500">* ( Ratio 3:1 )</small>
                 </div>
                 <div className="flex justify-center mt-4">
                   <label htmlFor="image-upload" className="cursor-pointer">
@@ -160,7 +140,7 @@ const Banner = () => {
           </div>
           <div className="flex md:justify-end gap-3 mt-4">
               <button type="reset" id="reset" className="btn btn-secondary bg-gray-400 text-white py-2 px-4 rounded-md">Reset</button>
-              <button type="submit" className="btn btn-primary bg-indigo-500 text-white py-2 px-4 rounded-md">Submit</button>
+              <button type="submit" className="btn btn-primary bg-indigo-500 text-white py-2 px-4 rounded-md">Send Notification</button>
             </div>
         </div>
         <div className="col-12 mt-6">
@@ -186,4 +166,4 @@ const Banner = () => {
   );
 }
 
-export default Banner;
+export default Notification;
