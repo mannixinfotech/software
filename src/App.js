@@ -11,15 +11,15 @@ import Notification from './Componets/Notification';
 import NewSale from './Pos/NewSale';
 import Orders from './Pos/Orders';
 import VerifyPayment from './Pos/VerifyPayment';
-import UserProfile from './UserProfile';
+
 import AdminRegisterPage from './Register/AdminRegister';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<UserProfile />} />
-        <Route path="/dashboard" element={<DashBoard><SideBar/></DashBoard>} />
+        {/* <Route path="/" element={<UserProfile />} /> */}
+        <Route path="/" element={<DashBoard><SideBar/></DashBoard>} />
         <Route path="/message" element={<Message />} />
         <Route path="/allorder" element={<AllOrder />} />
         <Route path="/category" element={<Category />} />
