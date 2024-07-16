@@ -1,12 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SideBar from "../Componets/SideBar";
-import { DataGrid } from '@mui/x-data-grid';
+
+import DataTable from 'react-data-table-component';
+import axios from 'axios';
 
 
 const Category = () => {
+  const [orders, setOrders] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [imagePreview, setImagePreview] = useState('https://minaxipalace.in/app/public/assets/admin/img/400x400/img2.jpg');
 
- 
+  useEffect(() => {
+    axios
+      .get("https://minaxipalace.onrender.com/bookorder/get")
+      .then((response) => {
+        setOrders(response.data.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the orders!", error);
+        setLoading(false);
+      });
+  }, []);
   
 
   const handleImageChange = (e) => {
@@ -21,12 +36,33 @@ const Category = () => {
   };
  
 
-  // Define columns for the table
   const columns = [
-    { field: 'id', headerName: 'ID', width: 70 },
-    { field: 'name', headerName: 'Name', width: 200 },
-    { field: 'email', headerName: 'Email', width: 200 },
-    { field: 'age', headerName: 'Age', width: 100 },
+    {
+      name: 'SL',
+      
+      
+    },
+    {
+      name: 'Category Image',
+      
+    },
+    {
+      name: 'Name',
+     
+    },
+    {
+      name: 'Status',
+      
+    },
+    {
+      name: 'Priority',
+     
+    },
+ 
+    {
+      name: 'Actions',
+     
+    },
   ];
 
   return (
@@ -92,13 +128,22 @@ const Category = () => {
           </form>
         </div>
         <div className="col-12 mt-6">
-        <DataGrid
-      
-        columns={columns}
-       
-        
-       
-      />
+          <DataTable
+            columns={columns}
+            data={orders}
+           
+            progressPending={loading}
+            customStyles={{
+              head: {
+                style: {
+                  fontSize: '15px',
+                  fontWeight: 'bold',
+                 
+                },
+              },
+            }}
+           
+          />
         </div>
       </div>
     </div>
